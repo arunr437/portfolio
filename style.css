@@ -1,0 +1,941 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f6f5f5;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url("resources/images/bg.png");
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
+    position: sticky;
+    top: 0px;
+    opacity: .90;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    margin: 7px 30px;
+    color: #505050;
+    font-size: 16px;
+    font-weight: 800;
+    border: 3px solid transparent;
+}
+
+a:active {
+    transform: scale(1.1);
+}
+
+nav div ul li a:hover {
+    border-bottom: 3px solid black;
+}
+
+.active_underlined {
+    border-bottom: 3px solid black;
+}
+
+.logo {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+a.logo {
+    text-decoration: none;
+}
+
+a.logo:hover {
+    /* background-color: #000000; */
+}
+
+.active {
+    font-weight: bold;
+    color: #2d2a2a;
+}
+
+a:link {
+    color: black;
+}
+
+/* visited link */
+
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+
+a:hover {
+    color: black;
+}
+
+/* selected link */
+
+a:active {
+    color: black;
+}
+
+.introduction p:nth-child(1) {
+    font-family: calibri;
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 1.375rem;
+}
+
+.introduction p:nth-child(2) {
+    font-family: calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    font-size: 60px;
+    word-wrap: break-word;
+}
+
+.introduction p:nth-child(3) {
+    font-family: calibri;
+    color: #403e3e;
+    font-size: 30px;
+    line-height: 1.875rem;
+}
+
+.introduction p {
+    line-height: 0px;
+    margin: 46px 0px 25px;
+}
+
+.introduction {
+    padding-top: 200px;
+    padding-left: 5%;
+    height: 80vh;
+}
+
+#email {
+    width: 9%;
+    height: 42px;
+    border-radius: 10px;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+    padding: 10px 40px;
+    border: 2px solid #373636;
+    color: #373636;
+}
+
+#resume {
+    width: 9%;
+    height: 42px;
+    border-radius: 10px;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+    padding: 10px 35px;
+    background-color: #0b0b0b;
+    color: #FFFFFF;
+    border: none;
+}
+
+#moreButton {
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    padding: 12px 25px 12px 25px;
+    border: 2px solid #373636;
+    color: #373636;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-size: 16pt;
+    text-align: center;
+    display: table;
+    width: 12%;
+    height: 40px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+#moreButton:hover i {
+    transform: rotateZ(90deg);
+    transition: ease .5s;
+}
+
+#moreButton i {
+    transform: rotateZ(0);
+    transition: ease .5s;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+.picture {
+    height: 560px;
+    position: absolute;
+    bottom: 0px;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.about {
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    margin: -7% auto 50px auto;
+    padding-top: 50px;
+    margin-top: 120px;
+    padding-bottom: 50px;
+}
+
+section img {
+    z-index: -1;
+}
+
+#workExperienceWaypoint {
+    margin-top: 100px;
+}
+
+.workExperience {
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    margin: -7% auto 50px auto;
+    position: relative;
+    margin-top: 200px;
+    padding-top: 50px;
+    margin-bottom: 120px;
+    padding-bottom: 40px;
+    flex: 0 0 50%;
+}
+
+.workExperience h3 {
+    color: #403e3e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    padding-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.sidebar {
+    position: fixed;
+    top: 40%;
+    right: 0px;
+    z-index: 3;
+}
+
+.sidebar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    background-color: #FFFFFF;
+    border: 1px solid #cbcbcb;
+    box-shadow: 2px 2px 12px rgb(0, 0, 0, 0.2);
+}
+
+.sidebar i {
+    color: #2b2b2b;
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    background-color: #000000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 2s;
+}
+
+.sidebar a:hover i {
+    color: #FFFFFF;
+    transition: all ease 0.5s;
+}
+
+.experienceList {
+    padding-left: 11%;
+    list-style-type: none;
+    position: relative;
+}
+
+.experienceList:before {
+    content: '';
+    background: #555555;
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+
+.experienceList li:before {
+    content: '';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    left: 9.2%;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.experienceList li p {
+    padding-left: 0.5%;
+    color: #555454;
+    font-family: calibri;
+    font-size: 16px;
+}
+
+.workExperience h3 {
+    color: #403e3e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 0px;
+    padding-bottom: 20px;
+}
+
+.webDeveloper {
+    margin-block-end: .5rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.developerDescription {
+    padding-bottom: 15px;
+}
+
+.text p:nth-child(1) {
+    color: #403e3e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 0px;
+    padding-bottom: 15px;
+}
+
+.text p:nth-child(2),
+.workExperience h4 {
+    color: #3e3d3d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1rem;
+    padding-bottom: 5px;
+}
+
+.text p:nth-child(3) {
+    color: #555454;
+    font-family: calibri;
+    font-size: 16px;
+}
+
+.text p:nth-child(4) {
+    color: #555454;
+    font-family: calibri;
+    font-size: 16px;
+}
+
+.text button {
+    width: 120px;
+    height: 40px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    font-family: calbri;
+    background-color: #262525;
+}
+
+.workExperience p:nth-child(1) {
+    color: #403e3e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    padding-bottom: 20px;
+    margin-left: 4%;
+}
+
+.workExperience h4 {
+    padding-left: 0.5%;
+    padding-top: 2px;
+    color: #3e3d3d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1rem;
+    margin-top: 35px;
+}
+
+.project {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 50px 7em 75px 7em;
+}
+
+.project h2 {
+    font-size: 2em;
+    color: #3b3838;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+.project p {
+    color: #706f6f;
+    font-size: 1.375em;
+    line-height: 1.5em
+}
+
+.header-bar {
+    font-family: "raleway-bold";
+    background: #444649;
+    height: 4px;
+    margin: 0 auto;
+    width: 6%;
+    min-width: 60px;
+    margin-bottom: 30px;
+}
+
+#myBtnContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.filter {
+    font-size: 13pt;
+    margin: 0 25px;
+    padding: 0 40px;
+    background-color: transparent;
+}
+
+.filterContainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5%;
+    padding-bottom: 200px;
+}
+
+.filterDiv {
+    background-color: white;
+    color: #ffffff;
+    width: 30%;
+    height: 250px;
+    text-align: center;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    position: relative;
+}
+
+/* The "show" class is added to the filtered elements */
+
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: transparent;
+    border-radius: 0;
+    width: 10%;
+    cursor: pointer;
+    outline: none !important;
+}
+
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* fixes overlap error in IE7/8,  */
+    background-image: url('empty.gif');
+}
+
+/* Add a dark background to the active button */
+
+.btn.active {
+    background-color: #0b0b0b;
+    color: white;
+    transition: all ease 1s;
+}
+
+.projectBackground {
+    z-index: 2;
+}
+
+.filterContainer>div:nth-child(1) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/asp1.png") center center/cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.filterContainer>div:nth-child(2) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/php1.png") center center/cover;
+    background-position-x: 0;
+}
+
+.filterContainer>div:nth-child(3) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/php2.png") center center/cover;
+    background-size: cover;
+    background-position: 40% 0;
+}
+
+.filterContainer>div:nth-child(4) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/php3.png") center center/cover;
+}
+
+.filterContainer>div:nth-child(5) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/game1.png") center center/cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.filterContainer>div:nth-child(6) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/game2.png") center center/cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.filterContainer>div:nth-child(7) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/asp2.png") center center/cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.filterContainer>div:nth-child(8) div.projectBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("resources/images/loading.jpg") center center/cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.bold {
+    font-size: 16pt;
+    line-height: 1rem;
+    font-weight: 700;
+    padding-top: 0;
+    margin-top: 60px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-family: "Raleway-bold";
+}
+
+.highlight {
+    font-size: 12pt;
+    font-weight: 500;
+    padding-top: 10px;
+    margin-top: 0;
+}
+
+.buttonArea {
+    width: 100%;
+}
+
+.viewButton {
+    width: 170px;
+    background-color: #0b0b0b;
+    color: white;
+    font-size: 13pt;
+    outline: none;
+    margin: 40px auto;
+    padding: 7px 0;
+}
+
+.projectText {
+    position: relative;
+    color: black;
+    padding-top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    padding-top: 25px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    padding-bottom: 4rem;
+}
+
+footer p.text {
+    margin-block-end: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.noSpace {
+    margin-block-end: 0;
+}
+
+#bottom {
+    margin-top: 20px;
+}
+
+/* On screens that are 800px or less */
+
+@media screen and (max-width: 1030px) {
+    section {
+        height: 60vh;
+        background-size: contain;
+    }
+
+    .introduction {
+        top: 35.5%;
+        padding-top: 300px;
+        height: 50vh;
+    }
+
+    .introduction p:nth-child(2) {
+        font-size: 3rem;
+    }
+
+    .introduction p:nth-child(3) {
+        font-size: 1.4rem;
+    }
+
+    .sidebar {
+        top: 30%;
+    }
+
+    .picture {
+        bottom: 0;
+        left: 75%;
+    }
+
+    .about {
+        margin-top: 100px;
+    }
+
+    #myBtnContainer .btn {
+        width: 12%;
+        padding: 12px 3px;
+        font-size: 14px;
+    }
+
+    #moreButton {
+        width: 15%;
+        padding: 12px 25px 12px 25px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        height: 80vh;
+    }
+
+    .introduction {
+        top: 35.5%;
+        padding-top: 300px;
+        height: 60vh;
+    }
+
+    .sidebar {
+        top: 30%;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+        font-size: 1.4rem;
+    }
+
+    .nav-item {
+        padding: 0;
+        width: 18%;
+        padding-top: 5px;
+    }
+
+    nav ul li a {
+        padding: 7px 0px;
+        font-size: 14px;
+        margin: 7px 10px;
+    }
+
+    .picture {
+        bottom: 0;
+    }
+
+    #moreButton {
+        width: 30%;
+        padding: 12px 25px 12px 25px;
+    }
+
+    .about {
+        margin-top: 100px;
+    }
+
+    #myBtnContainer .btn {
+        width: 12%;
+        padding: 12px 3px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .introduction {
+        top: 25.5%;
+        padding-top: 150px;
+    }
+
+    .introduction p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+
+    .picture {
+        left: 50%;
+        bottom: -10px;
+        opacity: .8;
+    }
+
+    #moreButton {
+        width: 35%;
+        margin-top: 100px;
+    }
+
+    section {
+        height: 80vh;
+    }
+
+    .workExperience h4 {
+        padding-left: 1rem;
+        padding-top: 1px;
+        color: #3e3d3d;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1rem;
+    }
+
+    .developerDescription {
+        padding: 0 5% 15px 5%;
+    }
+
+    .experienceList li:before {
+        content: '';
+        background: #fff;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #000000;
+        left: 1.45rem;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+    }
+
+    .experienceList li p {
+        padding-left: 1rem;
+        color: #555454;
+        font-family: calibri;
+        font-size: 1rem;
+    }
+
+    .project {
+        padding: 50px 3em 75px 3em;
+    }
+
+    .project p {
+        font-size: 1.1rem;
+    }
+
+    #myBtnContainer .btn {
+        width: 20%;
+        padding: 12px 3px;
+        font-size: 14px;
+    }
+
+    .filterDiv {
+        width: 40%;
+    }
+
+    #footer {
+        padding: 0 5%;
+    }
+
+    .linkedin {
+        display: none;
+    }
+
+    .contact {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .introduction {
+        font-size: 1rem;
+    }
+
+    .introduction p:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    #moreButton {
+        width: 35%;
+        padding: 10px 5px;
+        margin-top: 75px;
+    }
+
+    #email {
+        width: 80px;
+        padding: 10px 30px;
+    }
+
+    #resume {
+        width: 80px;
+        padding: 10px 30px;
+    }
+
+    .project {
+        padding: 50px 3em 75px 3em;
+    }
+
+    .developerDescription {
+        padding: 0 5% 15px 5%;
+    }
+
+    #myBtnContainer .btn {
+        width: 20%;
+        padding: 12px 0px;
+        font-size: 14px;
+    }
+
+    .contact {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .col-md-4 {
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .introduction {
+        top: 25.5%;
+        padding-top: 75px;
+    }
+
+    .developerDescription {
+        padding: 0 5% 15px 5%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .introduction {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    #email {
+        width: 60px;
+        padding: 10px 20px;
+    }
+
+    #resume {
+        width: 60px;
+        padding: 10px 20px;
+    }
+
+    .workExperience h3 {
+        font-size: 1.6rem;
+    }
+
+    .developerDescription {
+        padding: 0 5% 15px 5%;
+    }
+
+    #myBtnContainer .btn {
+        width: 20%;
+        padding: 12px 0px;
+        font-size: 12px;
+    }
+}
